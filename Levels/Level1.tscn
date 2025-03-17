@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://bchshkco2jf6e"]
+[gd_scene load_steps=12 format=4 uid="uid://bchshkco2jf6e"]
 
 [ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://Images/tanks-terrain.png" id="2_05pb0"]
-[ext_resource type="Script" uid="uid://c03th1i1gg727" path="res://Levels/path_2d.gd" id="3_05pb0"]
+[ext_resource type="Script" uid="uid://c03th1i1gg727" path="res://scripts/path_2d.gd" id="3_05pb0"]
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="4_dl8mf"]
+[ext_resource type="PackedScene" uid="uid://dp5v3t3ji71rg" path="res://Enemies/small_teacher.tscn.tscn" id="4_xcayt"]
 [ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://Images/pixel-heart-2779422_1280.webp" id="5_5g41i"]
 [ext_resource type="Script" uid="uid://dhle58egxkl0p" path="res://Levels/label.gd" id="5_05pb0"]
 [ext_resource type="PackedScene" uid="uid://6ps7fjm0x6hq" path="res://tower.tscn" id="6_05pb0"]
@@ -49,7 +50,8 @@ tile_set = SubResource("TileSet_fos0i")
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_3dxm6")
 script = ExtResource("3_05pb0")
-enemy_scene = ExtResource("4_dl8mf")
+enemy_angryteacher_scene = ExtResource("4_dl8mf")
+enemy_smallteacher_scene = ExtResource("4_xcayt")
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(10, 10)
