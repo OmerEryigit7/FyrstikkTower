@@ -14,3 +14,5 @@ func _process(delta):
 		queue_free()
 		if defines.remaining_enemy == 0:
 			defines.wave += 1
+			get_node("/root/Main/Path2D").spawn()
+			get_node("/root/Main/Label2").updatelabel()

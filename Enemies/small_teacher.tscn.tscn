@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://dp5v3t3ji71rg"]
+
+[ext_resource type="Script" uid="uid://yihbs56kfafu" path="res://Enemies/small_teacher.tscn.gd" id="1_om6an"]
+[ext_resource type="Script" uid="uid://jno8sdw6ngr" path="res://Enemies/character_body_2d.gd" id="2_iummg"]
+[ext_resource type="Texture2D" uid="uid://bikkat4rrs8h0" path="res://Images/SmallTeacher1.png" id="2_l8cwj"]
+[ext_resource type="Texture2D" uid="uid://b6jmq3qrashpn" path="res://Images/SmallTeacher2.png" id="3_om6an"]
+[ext_resource type="Texture2D" uid="uid://28afejxbqe6u" path="res://Images/SmallTeacher3.png" id="4_iummg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44ks5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l8cwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_om6an")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iummg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_om6an")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ws1u"]
+radius = 37.9973
+height = 127.974
+
+[node name="SmallTeacher" type="PathFollow2D"]
+script = ExtResource("1_om6an")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_iummg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(-4.65661e-10, -1.19209e-07)
+rotation = -1.5708
+scale = Vector2(4.513, 4.5)
+sprite_frames = SubResource("SpriteFrames_44ks5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -7)
+rotation = 1.57334
+shape = SubResource("CapsuleShape2D_5ws1u")
