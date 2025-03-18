@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://6ps7fjm0x6hq" path="res://tower.tscn" id="6_05pb0"]
 [ext_resource type="Script" uid="uid://s6xafn3qg27b" path="res://Levels/label_2.gd" id="7_dl8mf"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cm0pq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
 texture = ExtResource("2_05pb0")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
@@ -29,7 +29,7 @@ texture_region_size = Vector2i(128, 128)
 
 [sub_resource type="TileSet" id="TileSet_fos0i"]
 tile_size = Vector2i(128, 128)
-sources/1 = SubResource("TileSetAtlasSource_cm0pq")
+sources/1 = SubResource("TileSetAtlasSource_xcayt")
 
 [sub_resource type="Curve2D" id="Curve2D_3dxm6"]
 bake_interval = 0.01
@@ -62,6 +62,7 @@ offset_bottom = 46.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 script = ExtResource("5_05pb0")
+metadata/_edit_use_anchors_ = true
 
 [node name="Pixel-heart-27794221280" type="Sprite2D" parent="."]
 position = Vector2(24, 25)
@@ -77,3 +78,4 @@ offset_top = 1.0
 offset_right = 1152.0
 offset_bottom = 24.0
 script = ExtResource("7_dl8mf")
+metadata/_edit_use_anchors_ = true

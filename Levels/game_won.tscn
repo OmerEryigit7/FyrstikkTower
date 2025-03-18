@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4me8bjc44p15"]
 
-[ext_resource type="Script" uid="uid://cufg8cugppulf" path="res://scripts/level_1_button.gd" id="1_nij62"]
+[ext_resource type="Script" uid="uid://c550ucr0i0it1" path="res://Levels/nivåskjerm_button.gd" id="2_psb2w"]
 [ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_nns18"]
 [ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_xoari"]
 
-[node name="GameOver" type="Node2D"]
+[node name="Gamewon" type="Node2D"]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 offset_right = 1152.0
@@ -25,7 +25,7 @@ script = ExtResource("3_nns18")
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 text = "Nivåskjerm"
-script = ExtResource("1_nij62")
+script = ExtResource("2_psb2w")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 421.0
