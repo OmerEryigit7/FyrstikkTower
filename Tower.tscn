@@ -1,3 +1,33 @@
-[gd_scene format=3 uid="uid://xif7je0xheu3"]
+[gd_scene load_steps=5 format=3 uid="uid://xif7je0xheu3"]
 
-[node name="Tower" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://c0q7dtwis4105" path="res://TowerSprites/New Piskel copy 2.png" id="1_arn3v"]
+[ext_resource type="Script" uid="uid://dwc68dc05g413" path="res://scripts/towerattack.gd" id="1_bn6qc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_usulm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htvg3"]
+radius = 250.0
+
+[node name="Tower1" type="StaticBody2D"]
+script = ExtResource("1_bn6qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_usulm")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, 11)
+
+[node name="Tower" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tower"]
+shape = SubResource("CircleShape2D_htvg3")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_arn3v")
+
+[connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]
+[connection signal="body_exited" from="Tower" to="." method="_on_tower_body_exited"]

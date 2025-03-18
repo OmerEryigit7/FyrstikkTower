@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8kfdhhyr8vs"
-valid=false
+uid="uid://dtafdf5v3t3cy"
+path="res://.godot/imported/clipart3318578.png-1253ca624d090da80177915302996c38.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://pngwing.com.png"
+source_file="res://TowerSprites/clipart3318578.png"
+dest_files=["res://.godot/imported/clipart3318578.png-1253ca624d090da80177915302996c38.ctex"]
 
 [params]
 

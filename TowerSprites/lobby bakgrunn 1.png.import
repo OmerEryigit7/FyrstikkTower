@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8kfdhhyr8vs"
-valid=false
+uid="uid://crm5r61l7kkdi"
+path="res://.godot/imported/lobby bakgrunn 1.png-47486543a66caf18396cfe6c3093e963.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://pngwing.com.png"
+source_file="res://TowerSprites/lobby bakgrunn 1.png"
+dest_files=["res://.godot/imported/lobby bakgrunn 1.png-47486543a66caf18396cfe6c3093e963.ctex"]
 
 [params]
 

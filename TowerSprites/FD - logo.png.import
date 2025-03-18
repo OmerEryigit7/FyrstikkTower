@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp8kfdhhyr8vs"
-valid=false
+uid="uid://bg7jtfqgjpkpr"
+path="res://.godot/imported/FD - logo.png-fb02e1eb09b0286862965c8b9d8fa8e3.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://pngwing.com.png"
+source_file="res://TowerSprites/FD - logo.png"
+dest_files=["res://.godot/imported/FD - logo.png-fb02e1eb09b0286862965c8b9d8fa8e3.ctex"]
 
 [params]
 
