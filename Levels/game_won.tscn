@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4me8bjc44p15"]
+
+[ext_resource type="Script" uid="uid://c550ucr0i0it1" path="res://Levels/nivåskjerm_button.gd" id="2_psb2w"]
+[ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_nns18"]
+[ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_xoari"]
+
+[node name="Gamewon" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+text = "Hovedmeny"
+expand_icon = true
+script = ExtResource("3_nns18")
+
+[node name="Nivåskjerm_button" type="Button" parent="CenterContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Nivåskjerm"
+script = ExtResource("2_psb2w")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 421.0
+offset_top = 143.0
+offset_right = 725.0
+offset_bottom = 246.0
+theme_override_font_sizes/font_size = 75
+text = "Du vant!"
+
+[node name="LobbyBakgrunn" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(576, 324)
+scale = Vector2(36, 20.25)
+texture = ExtResource("4_xoari")
+
+[connection signal="pressed" from="CenterContainer/GridContainer/Button" to="CenterContainer/GridContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/Nivåskjerm_button" to="CenterContainer/GridContainer/Nivåskjerm_button" method="_on_pressed"]

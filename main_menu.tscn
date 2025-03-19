@@ -50,6 +50,7 @@ script = ExtResource("2_fu7sn")
 
 [node name="LobbyBakgrunn" type="Sprite2D" parent="."]
 z_index = -1
+texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(36, 20.25)
 texture = ExtResource("3_fu7sn")
@@ -57,7 +58,7 @@ texture = ExtResource("3_fu7sn")
 [node name="Fd-Logo" type="Sprite2D" parent="."]
 position = Vector2(575, 150)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_jix8l")
+
 
 [connection signal="pressed" from="Spill" to="Spill" method="_on_pressed"]
 [connection signal="pressed" from="Spill" to="Avslutt" method="_on_spill_pressed"]
