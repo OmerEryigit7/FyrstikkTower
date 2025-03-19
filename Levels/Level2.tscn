@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bnflsaybfykhu"]
+[gd_scene load_steps=14 format=4 uid="uid://bnflsaybfykhu"]
 
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="3_m3ha0"]
 [ext_resource type="Script" uid="uid://c5ncb7g6f7p0h" path="res://Levels/path_2d2.gd" id="3_v115i"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d1gj5wvnejuhy" path="res://Images/roadTextures_tilesheet.png" id="7_w0h0a"]
 [ext_resource type="Script" uid="uid://dym8lps6b24vr" path="res://Levels/label_3.gd" id="8_vd23k"]
 [ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="9_x7rwe"]
+[ext_resource type="PackedScene" uid="uid://m4pcwevr8ofs" path="res://TowerPanel.tscn" id="10_x7rwe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ha0"]
 texture = ExtResource("7_w0h0a")
@@ -1588,10 +1589,10 @@ scale = Vector2(0.0366699, 0.0382813)
 texture = ExtResource("5_x7rwe")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1076.0
-offset_top = 1.0
-offset_right = 1152.0
-offset_bottom = 24.0
+offset_left = 941.0
+offset_top = 3.0
+offset_right = 1017.0
+offset_bottom = 26.0
 script = ExtResource("6_lf2mf")
 metadata/_edit_use_anchors_ = true
 
@@ -1606,3 +1607,6 @@ script = ExtResource("8_vd23k")
 position = Vector2(412, 20)
 scale = Vector2(0.0322917, 0.0254167)
 texture = ExtResource("9_x7rwe")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("10_x7rwe")]
+metadata/_edit_use_anchors_ = true

@@ -27,6 +27,7 @@ shape = SubResource("CircleShape2D_htvg3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(3, 3)
 texture = ExtResource("1_arn3v")
 
 [connection signal="body_entered" from="Tower" to="." method="_on_tower_body_entered"]

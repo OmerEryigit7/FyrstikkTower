@@ -1,30 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://cff2oxfxbud73"]
 
-[ext_resource type="Script" uid="uid://86bqqvtnveju" path="res://towerbullet.gd" id="1_bn13a"]
+[ext_resource type="Script" uid="uid://drcf3e8win1ko" path="res://scripts/towerbullet.gd" id="1_sc2v1"]
+[ext_resource type="Texture2D" uid="uid://dtafdf5v3t3cy" path="res://TowerSprites/clipart3318578.png" id="2_nm6em"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sc7iy"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_454kp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nm6em"]
-size = Vector2(5, 5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x2so"]
+size = Vector2(508, 90)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_454kp"]
-size = Vector2(5, 5)
+[node name="Tower1Bullet" type="CharacterBody2D"]
+script = ExtResource("1_sc2v1")
 
-[node name="Towerbullet" type="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_454kp")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-modulate = Color(0.517184, 0.517184, 0.517184, 1)
-rotation = -1.5708
-scale = Vector2(-3.6816, 1.74854)
-mesh = SubResource("CapsuleMesh_sc7iy")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.56222
+texture = ExtResource("2_nm6em")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_bn13a")
+[node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_nm6em")
-
-[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
-shape = SubResource("RectangleShape2D_454kp")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, 1)
+shape = SubResource("RectangleShape2D_8x2so")

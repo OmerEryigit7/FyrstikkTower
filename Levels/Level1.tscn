@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://dym8lps6b24vr" path="res://Levels/label_3.gd" id="9_5g41i"]
 [ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="10_7fl83"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
 texture = ExtResource("2_05pb0")
 texture_region_size = Vector2i(128, 128)
@@ -73,10 +72,10 @@ scale = Vector2(0.0366699, 0.0382813)
 texture = ExtResource("5_5g41i")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1076.0
-offset_top = 1.0
-offset_right = 1152.0
-offset_bottom = 24.0
+offset_left = 943.0
+offset_top = 17.0
+offset_right = 1019.0
+offset_bottom = 40.0
 script = ExtResource("7_dl8mf")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_xcayt")]
@@ -88,6 +87,7 @@ offset_top = 8.0
 offset_right = 472.0
 offset_bottom = 31.0
 script = ExtResource("9_5g41i")
+
 [node name="876544660099863" type="Sprite2D" parent="."]
 position = Vector2(412, 20)
 scale = Vector2(0.0322917, 0.0254167)

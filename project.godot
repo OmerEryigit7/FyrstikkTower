@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FyrstikkTower"
-run/main_scene="uid://bchshkco2jf6e"
+run/main_scene="uid://drqkv5t7fc3gn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Images/icon.svg"
 

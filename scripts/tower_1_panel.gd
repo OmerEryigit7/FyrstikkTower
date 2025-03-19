@@ -1,28 +1,40 @@
 extends Panel
 
 @onready var tower = preload("res://Tower.tscn")
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var parentnode = get_parent()
+
 
 var tile1
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+var isPlacingTower = false
+var tempTower
+@onready var parentnode = get_node("/root/Main/Label")
+
+
 func _process(delta: float) -> void:
 	pass
 
 func _on_gui_input(event):
-	var tempTower = tower.instantiate() 
-	if event is InputEventMouseButton and event.button_mask == 1:
-		add_child(tempTower)	
-		tempTower.global_position = event.global_position
-		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
-	elif event is InputEventMouseMotion and event.button_mask == 1:
-		if get_child_count() > 1:
-			get_child(1).global_position = event.global_position
-			
-	elif event is InputEventMouseButton and event.button_mask == 0:
-		if event.global_position.x >= 2944:
-			if get_child_count() > 1:
-				get_child(1).quee_free()
+	if event is InputEventMouseButton and event.button_mask == 1 and not isPlacingTower:
+		if defines.money >= 30:
+			tempTower = tower.instantiate() 
+			parentnode.add_child(tempTower)
+			tempTower.global_position = get_viewport().get_mouse_position()
+			tempTower.process_mode = Node.PROCESS_MODE_DISABLED
+			defines.money -= 30
+			get_node("/root/Main/Label3").updatelabel()
+			isPlacingTower = true
 		
-	print(event)
+func _input(event):
+	if isPlacingTower:
+			tempTower.global_position = get_viewport().get_mouse_position()
+	if event is InputEventMouseButton:
+		if isPlacingTower:
+			tempTower.global_position = get_viewport().get_mouse_position()
+			if event.button_mask == 0 and isPlacingTower:
+				if tempTower:
+					tempTower.process_mode = Node.PROCESS_MODE_ALWAYS
+					isPlacingTower = false
+					tempTower = null
+					if get_child_count() > 1:
+						get_child(1).global_position = event.global_position

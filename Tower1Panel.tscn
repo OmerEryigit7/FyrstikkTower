@@ -13,7 +13,7 @@ script = ExtResource("1_jf5wc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(20, 19)
+position = Vector2(18, 19)
 texture = ExtResource("1_6yxux")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
