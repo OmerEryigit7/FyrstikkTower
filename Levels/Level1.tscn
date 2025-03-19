@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bchshkco2jf6e"]
+[gd_scene load_steps=14 format=4 uid="uid://bchshkco2jf6e"]
 
 [ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://Images/tanks-terrain.png" id="2_05pb0"]
 [ext_resource type="Script" uid="uid://c03th1i1gg727" path="res://scripts/path_2d.gd" id="3_05pb0"]
@@ -6,8 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dp5v3t3ji71rg" path="res://Enemies/small_teacher.tscn.tscn" id="4_xcayt"]
 [ext_resource type="Texture2D" uid="uid://mffh87ls2b17" path="res://Images/pixel-heart-2779422_1280.webp" id="5_5g41i"]
 [ext_resource type="Script" uid="uid://dhle58egxkl0p" path="res://Levels/label.gd" id="5_05pb0"]
-[ext_resource type="PackedScene" uid="uid://6ps7fjm0x6hq" path="res://tower.tscn" id="6_05pb0"]
+[ext_resource type="PackedScene" uid="uid://xif7je0xheu3" path="res://Tower.tscn" id="6_05pb0"]
 [ext_resource type="Script" uid="uid://s6xafn3qg27b" path="res://Levels/label_2.gd" id="7_dl8mf"]
+[ext_resource type="Script" uid="uid://dym8lps6b24vr" path="res://Levels/label_3.gd" id="9_5g41i"]
+[ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="10_7fl83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
 texture = ExtResource("2_05pb0")
@@ -79,3 +81,15 @@ offset_right = 1152.0
 offset_bottom = 24.0
 script = ExtResource("7_dl8mf")
 metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 8.0
+offset_right = 472.0
+offset_bottom = 31.0
+script = ExtResource("9_5g41i")
+
+[node name="876544660099863" type="Sprite2D" parent="."]
+position = Vector2(412, 20)
+scale = Vector2(0.0322917, 0.0254167)
+texture = ExtResource("10_7fl83")

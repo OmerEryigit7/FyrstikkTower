@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://cog30weduplqc"]
+[gd_scene load_steps=16 format=3 uid="uid://cog30weduplqc"]
 
 [ext_resource type="Script" uid="uid://cufg8cugppulf" path="res://scripts/level_1_button.gd" id="1_cbxu1"]
 [ext_resource type="Texture2D" uid="uid://clb3w4gkwgp6p" path="res://Images/93634.png" id="2_4dbvg"]
+[ext_resource type="Script" uid="uid://dyj0rhvk87y2d" path="res://Levels/level_1_button_2.gd" id="2_jk6ke"]
 [ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_7yrxk"]
 [ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_2njtx"]
 
@@ -41,11 +42,13 @@ layout_mode = 2
 text = "1"
 script = ExtResource("1_cbxu1")
 
-[node name="Button" type="Button" parent="CenterContainer/GridContainer"]
+[node name="Level2_button" type="Button" parent="CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
+text = "2"
+script = ExtResource("2_jk6ke")
 
-[node name="Button2" type="Button" parent="CenterContainer/GridContainer"]
+[node name="Button" type="Button" parent="CenterContainer/GridContainer"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
@@ -105,5 +108,6 @@ scale = Vector2(36, 20.25)
 texture = ExtResource("4_2njtx")
 
 [connection signal="pressed" from="CenterContainer/GridContainer/Level1_button" to="CenterContainer/GridContainer/Level1_button" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/GridContainer/Level2_button" to="CenterContainer/GridContainer/Level2_button" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="CenterContainer/GridContainer/Level1_button" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -56,6 +56,7 @@ scale = Vector2(36, 20.25)
 texture = ExtResource("3_fu7sn")
 
 [node name="Fd-Logo" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(585, 162)
 scale = Vector2(0.234762, 0.217667)
 texture = ExtResource("4_jix8l")

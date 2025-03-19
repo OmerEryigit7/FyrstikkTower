@@ -1,9 +1,9 @@
 extends Path2D
 
 var enemy_angryteacher = 5 #wave 1
-var enemy_smallteacher = 0 #wave 1
+var enemy_smallteacher = 3 #wave 1
 
-@export var enemy_angryteacher_scene: PackedScene  #enemy_scene er definert inne i inspektøren
+@export var enemy_angryteacher_scene: PackedScene #enemy_scene er definert inne i inspektøren
 @export var enemy_smallteacher_scene: PackedScene
 
 func _ready():
@@ -20,22 +20,22 @@ func spawn():
 			if defines.wave == 2:
 				defines.remaining_enemy = 0 + enemy_angryteacher
 				enemy_angryteacher = 7
-				enemy_smallteacher = 1
+				enemy_smallteacher = 4
 				
 			elif defines.wave == 3: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
 				enemy_angryteacher = 7
-				enemy_smallteacher = 2
+				enemy_smallteacher = 5
 				
 			elif defines.wave == 4: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
-				enemy_angryteacher = 8
-				enemy_smallteacher = 3
+				enemy_angryteacher = 7
+				enemy_smallteacher = 6
 				
 			elif defines.wave == 5: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
-				enemy_angryteacher = 8
-				enemy_smallteacher = 4
+				enemy_angryteacher = 7
+				enemy_smallteacher = 7
 				
 			for i in range(enemy_angryteacher):
 				await get_tree().create_timer(0.85).timeout #1 sek pause mellom hvert spawn
