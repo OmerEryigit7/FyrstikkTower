@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cog30weduplqc"]
+[gd_scene load_steps=17 format=3 uid="uid://cog30weduplqc"]
 
 [ext_resource type="Script" uid="uid://cufg8cugppulf" path="res://scripts/level_1_button.gd" id="1_cbxu1"]
 [ext_resource type="Texture2D" uid="uid://clb3w4gkwgp6p" path="res://Images/93634.png" id="2_4dbvg"]
 [ext_resource type="Script" uid="uid://dyj0rhvk87y2d" path="res://Levels/level_1_button_2.gd" id="2_jk6ke"]
 [ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_7yrxk"]
 [ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_2njtx"]
+[ext_resource type="AudioStream" uid="uid://c4t4i5oviekh6" path="res://Sound/FYRSTIKK DEFENSE - Lobby musikk (utkast 1).wav" id="6_7j844"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7yrxk"]
 
@@ -106,6 +107,10 @@ z_index = -1
 position = Vector2(576, 324)
 scale = Vector2(36, 20.25)
 texture = ExtResource("4_2njtx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7j844")
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/GridContainer/Level1_button" to="CenterContainer/GridContainer/Level1_button" method="_on_pressed"]
 [connection signal="pressed" from="CenterContainer/GridContainer/Level2_button" to="CenterContainer/GridContainer/Level2_button" method="_on_pressed"]

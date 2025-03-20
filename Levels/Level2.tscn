@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bnflsaybfykhu"]
+[gd_scene load_steps=19 format=4 uid="uid://bnflsaybfykhu"]
 
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="3_m3ha0"]
 [ext_resource type="Script" uid="uid://c5ncb7g6f7p0h" path="res://Levels/path_2d2.gd" id="3_v115i"]
@@ -10,8 +10,11 @@
 [ext_resource type="Script" uid="uid://dym8lps6b24vr" path="res://Levels/label_3.gd" id="8_vd23k"]
 [ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="9_x7rwe"]
 [ext_resource type="PackedScene" uid="uid://m4pcwevr8ofs" path="res://TowerPanel.tscn" id="10_x7rwe"]
-[ext_resource type="AudioStream" uid="uid://dae27nkufhcxi" path="res://place character sfx.wav" id="11_lf2mf"]
-[ext_resource type="PackedScene" uid="uid://xif7je0xheu3" path="res://tower.tscn" id="12_80cou"]
+[ext_resource type="AudioStream" uid="uid://dae27nkufhcxi" path="res://Sound/character sfx.wav" id="11_lf2mf"]
+[ext_resource type="PackedScene" uid="uid://xif7je0xheu3" path="res://Tower.tscn" id="12_80cou"]
+[ext_resource type="AudioStream" uid="uid://c4t4i5oviekh6" path="res://Sound/FYRSTIKK DEFENSE - Lobby musikk (utkast 1).wav" id="13_xosfc"]
+[ext_resource type="AudioStream" uid="uid://cxm5odq0w3578" path="res://Sound/SOLDIERS MARCHING SOUND EFFECT NO COPYRIGHT.mp3" id="14_tweqo"]
+[ext_resource type="Script" uid="uid://dvblggkkwdi7q" path="res://Levels/audio_stream_player_2.gd" id="15_mbwna"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ha0"]
 texture = ExtResource("7_w0h0a")
@@ -1558,9 +1561,9 @@ sources/0 = SubResource("TileSetAtlasSource_m3ha0")
 [sub_resource type="Curve2D" id="Curve2D_80cou"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 143, 0, 0, 0, 0, 0, 144.085, 140.304, 0, 0, 0, 0, 151, 170, 0, 0, 0, 0, 177.541, 177.903, 0, 0, 0, 0, 819, 177, 0, 0, 0, 0, 845, 182, 0, 0, 0, 0, 852.205, 206.749, 0, 0, 0, 0, 858, 434, 26.3248, -2.1256, -26.3248, 2.1256, 836, 464, 0, 0, 0, 0, 184, 459, 0, -5.09809, 0, 5.09809, 148, 463, 0, 0, 0, 0, 141, 467, 0, 0, 0, 0, 141, 479, 0, 0, 0, 0, 141, 498, 0, 0, 0, 0, 141, 647)
+"points": PackedVector2Array(0, 0, 0, 0, 143, 0, 0, 0, 0, 0, 144.085, 140.304, 0, 0, 0, 0, 151, 170, 0, 0, 0, 0, 177.541, 177.903, 0, 0, 0, 0, 819, 177, 0, 0, 0, 0, 845, 182, 0, 0, 0, 0, 852.205, 206.749, 0, 0, 0, 0, 858, 434, 26.3248, -2.1256, -26.3248, 2.1256, 836, 464, 0, 0, 0, 0, 184, 464, 0, 0, 0, 0, 158, 464, 0, 0, 0, 0, 145, 472, 0, 0, 0, 0, 142, 484, 0, 0, 0, 0, 141, 503, 0, 0, 0, 0, 140, 515, 0, 0, 0, 0, 141, 647)
 }
-point_count = 15
+point_count = 16
 
 [node name="Main" type="Node2D"]
 
@@ -1619,3 +1622,12 @@ stream = ExtResource("11_lf2mf")
 
 [node name="Tower1" parent="." instance=ExtResource("12_80cou")]
 position = Vector2(225, 101)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_xosfc")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("14_tweqo")
+script = ExtResource("15_mbwna")

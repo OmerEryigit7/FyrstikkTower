@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=4 uid="uid://bchshkco2jf6e"]
+[gd_scene load_steps=19 format=4 uid="uid://bchshkco2jf6e"]
 
+[ext_resource type="Texture2D" uid="uid://duaor14eofyev" path="res://Images/bakken_tile-1.png-2.png" id="1_104vp"]
 [ext_resource type="Texture2D" uid="uid://n1lpriwci7e0" path="res://Images/tanks-terrain.png" id="2_05pb0"]
 [ext_resource type="Script" uid="uid://c03th1i1gg727" path="res://scripts/path_2d.gd" id="3_05pb0"]
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="4_dl8mf"]
@@ -10,6 +11,17 @@
 [ext_resource type="PackedScene" uid="uid://m4pcwevr8ofs" path="res://TowerPanel.tscn" id="7_xcayt"]
 [ext_resource type="Script" uid="uid://dym8lps6b24vr" path="res://Levels/label_3.gd" id="9_5g41i"]
 [ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="10_7fl83"]
+[ext_resource type="AudioStream" uid="uid://b5lwop2epsf1" path="res://Sound/FYRSTIKK DEFENSE - Game musikk (utkast 2).wav" id="11_p5226"]
+[ext_resource type="AudioStream" uid="uid://cxm5odq0w3578" path="res://Sound/SOLDIERS MARCHING SOUND EFFECT NO COPYRIGHT.mp3" id="12_tuji2"]
+[ext_resource type="Script" uid="uid://dvblggkkwdi7q" path="res://Levels/audio_stream_player_2.gd" id="13_f5cpa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3momc"]
+texture = ExtResource("1_104vp")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcayt"]
 texture = ExtResource("2_05pb0")
@@ -32,6 +44,7 @@ texture_region_size = Vector2i(128, 128)
 [sub_resource type="TileSet" id="TileSet_fos0i"]
 tile_size = Vector2i(128, 128)
 sources/1 = SubResource("TileSetAtlasSource_xcayt")
+sources/0 = SubResource("TileSetAtlasSource_3momc")
 
 [sub_resource type="Curve2D" id="Curve2D_3dxm6"]
 bake_interval = 0.01
@@ -46,7 +59,7 @@ position = Vector2(0, -7)
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 position = Vector2(0, 8)
-tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQABAAAAAAAIAAQAAQAAAAAAAAAIAAMAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAEAAQAAAAAAAAAIAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAADAAAAAQAAAAAAAAACAAAAAQAAAAAAAAABAAAAAQABAAAAAAABAAEAAQABAAAAAAABAAIAAQAFAAEAAAACAAIAAQACAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAADAAIAAQACAAAAAAAEAAIAAQACAAAAAAAFAAIAAQAEAAEAAAAGAAIAAQAAAAAAAAAGAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAACAAEAAQAAAAAAAAABAAMAAQAAAAAAAAAFAAMAAQAFAAEAAAAGAAMAAQACAAAAAAAHAAMAAQAEAAEAAAAHAAIAAQAAAAAAAAAHAAEAAQAAAAAAAAAEAAMAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAEAAQAAAAEAAAABAAIAAQAAAAEAAAACAAIAAQAAAAEAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAADAAIAAQAAAAEAAAAEAAIAAQAAAAEAAAAFAAIAAQAAAAEAAAAGAAIAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAMAAAAAAAAAAAAFAAMAAQAAAAEAAAAGAAMAAQAAAAEAAAAHAAMAAQAAAAEAAAAHAAIAAAAAAAAAAAAHAAEAAAAAAAAAAAAEAAMAAAAAAAAAAAAHAAQAAQAAAAEAAAA=")
 tile_set = SubResource("TileSet_fos0i")
 
 [node name="Path2D" type="Path2D" parent="."]
@@ -77,6 +90,7 @@ offset_top = 17.0
 offset_right = 1019.0
 offset_bottom = 40.0
 script = ExtResource("7_dl8mf")
+metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" parent="." instance=ExtResource("7_xcayt")]
 metadata/_edit_use_anchors_ = true
@@ -87,8 +101,18 @@ offset_top = 8.0
 offset_right = 472.0
 offset_bottom = 31.0
 script = ExtResource("9_5g41i")
+metadata/_edit_use_anchors_ = true
 
 [node name="876544660099863" type="Sprite2D" parent="."]
 position = Vector2(412, 20)
 scale = Vector2(0.0322917, 0.0254167)
 texture = ExtResource("10_7fl83")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_p5226")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("12_tuji2")
+script = ExtResource("13_f5cpa")

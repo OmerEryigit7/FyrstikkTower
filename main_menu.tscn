@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://drqkv5t7fc3gn"]
+[gd_scene load_steps=7 format=3 uid="uid://drqkv5t7fc3gn"]
 
 [ext_resource type="Script" uid="uid://8hdhqwqpn5mg" path="res://scripts/spill.gd" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://ce1oci5pe1g56" path="res://scripts/avslutt.gd" id="2_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="3_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://dcgyn8ver2es2" path="res://Images/FD - logo.png" id="4_jix8l"]
+[ext_resource type="AudioStream" uid="uid://c4t4i5oviekh6" path="res://Sound/FYRSTIKK DEFENSE - Lobby musikk (utkast 1).wav" id="5_glbon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
 bg_color = Color(0.25, 0.25, 0.25, 1)
@@ -50,7 +51,7 @@ script = ExtResource("2_fu7sn")
 
 [node name="LobbyBakgrunn" type="Sprite2D" parent="."]
 z_index = -1
-texture_filter = 6
+texture_filter = 1
 position = Vector2(576, 324)
 scale = Vector2(36, 20.25)
 texture = ExtResource("3_fu7sn")
@@ -59,6 +60,10 @@ texture = ExtResource("3_fu7sn")
 position = Vector2(575, 169)
 scale = Vector2(0.401429, 0.333333)
 texture = ExtResource("4_jix8l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_glbon")
+autoplay = true
 
 [connection signal="pressed" from="Spill" to="Spill" method="_on_pressed"]
 [connection signal="pressed" from="Spill" to="Avslutt" method="_on_spill_pressed"]
