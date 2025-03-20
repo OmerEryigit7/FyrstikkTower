@@ -18,6 +18,7 @@ config/icon="res://Images/icon.svg"
 [autoload]
 
 defines="*res://defines.gd"
+Global="*res://global.gd"
 
 [display]
 

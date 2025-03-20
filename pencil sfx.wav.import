@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://7wqtybeesllu"
+path="res://.godot/imported/pencil sfx.wav-39fcf94ee3074847efd0c85e343fbfd6.sample"
+
+[deps]
+
+source_file="res://pencil sfx.wav"
+dest_files=["res://.godot/imported/pencil sfx.wav-39fcf94ee3074847efd0c85e343fbfd6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

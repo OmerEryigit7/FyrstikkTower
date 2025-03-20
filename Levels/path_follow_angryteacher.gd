@@ -9,11 +9,11 @@ func _process(delta):
 		defines.health -= 5
 		defines.remaining_enemy -= 1
 		get_node("/root/Main/Label").text = str(defines.health)
-		
+		112
 		if defines.health <=0:
 			get_node("/root/Main/Label").text = "Game over!"
 			get_tree().change_scene_to_file("res://Levels/game_over.tscn")
-
+		Global.prog=0
 		queue_free()
 		
 		if defines.remaining_enemy == 0:
