@@ -1,11 +1,11 @@
-
 extends CharacterBody2D
 
+var speed = 400  # Bullet speed
+var direction = Vector2.ZERO  # Direction the bullet will travel
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-var bullet = preload("res://towerbullet.tscn")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# Called every frame to update bullet position
 func _process(delta: float) -> void:
-	pass
+	if direction != Vector2.ZERO:
+		position += direction * speed * delta
+		
+		# Check if the bullet hits the target (simple collision check)
