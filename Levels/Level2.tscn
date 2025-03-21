@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bnflsaybfykhu"]
+[gd_scene load_steps=15 format=4 uid="uid://bnflsaybfykhu"]
 
 [ext_resource type="PackedScene" uid="uid://bra7gjsmww1om" path="res://Enemies/enemy_test.tscn" id="3_m3ha0"]
 [ext_resource type="Script" uid="uid://c5ncb7g6f7p0h" path="res://Levels/path_2d2.gd" id="3_v115i"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://dkl77fru8xesy" path="res://Levels/876544660099863.png" id="9_x7rwe"]
 [ext_resource type="PackedScene" uid="uid://m4pcwevr8ofs" path="res://TowerPanel.tscn" id="10_x7rwe"]
 [ext_resource type="AudioStream" uid="uid://dae27nkufhcxi" path="res://place character sfx.wav" id="11_lf2mf"]
-[ext_resource type="PackedScene" uid="uid://xif7je0xheu3" path="res://tower.tscn" id="12_80cou"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3ha0"]
 texture = ExtResource("7_w0h0a")
@@ -1616,6 +1615,3 @@ metadata/_edit_use_anchors_ = true
 [node name="PlaceCharacterSfx" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-68, 218)
 stream = ExtResource("11_lf2mf")
-
-[node name="Tower1" parent="." instance=ExtResource("12_80cou")]
-position = Vector2(225, 101)

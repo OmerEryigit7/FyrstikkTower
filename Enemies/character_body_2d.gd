@@ -9,4 +9,5 @@ func _process(_delta):
 	if Global.prog < $"..".progress:
 		Global.prog = $"..".progress
 
-	
+func kill():
+	queue_free()

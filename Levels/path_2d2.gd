@@ -13,6 +13,11 @@ func _ready():
 	defines.remaining_enemy += enemy_angryteacher 
 	spawn()
 
+func _physics_process(delta):
+	if defines.health <= 0:
+		get_parent().get_parent().queue_free()
+		defines.money += 0
+
 func spawn():
 	if enemy_angryteacher_scene: #Hvis enemy_scene finnes
 		if defines.wave < 6:

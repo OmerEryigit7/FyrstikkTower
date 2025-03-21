@@ -15,7 +15,8 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://Levels/game_over.tscn")
 		Global.prog=0
 		queue_free()
-		
+	if enemyHealth <= 0:
+		queue_free()
 		if defines.remaining_enemy == 0:
 			defines.wave += 1
 			get_node("/root/Main/Path2D").spawn()

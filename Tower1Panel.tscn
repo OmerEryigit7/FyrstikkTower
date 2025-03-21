@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjos70b0a6qoc"]
 
-[ext_resource type="Texture2D" uid="uid://c0q7dtwis4105" path="res://TowerSprites/New Piskel copy 2.png" id="1_6yxux"]
 [ext_resource type="Script" uid="uid://djsu44qsypcnm" path="res://scripts/tower_1_panel.gd" id="1_jf5wc"]
+[ext_resource type="Texture2D" uid="uid://co8sxbd8w2fqm" path="res://TowerSprites/imageonline/01.png" id="2_jf5wc"]
 
 [node name="Panel" type="Panel"]
 custom_minimum_size = Vector2(35, 35)
@@ -14,6 +14,6 @@ script = ExtResource("1_jf5wc")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(18, 19)
-texture = ExtResource("1_6yxux")
+texture = ExtResource("2_jf5wc")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
