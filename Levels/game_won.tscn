@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4me8bjc44p15"]
+[gd_scene load_steps=5 format=3 uid="uid://c4me8bjc44p15"]
 
 [ext_resource type="Script" uid="uid://c550ucr0i0it1" path="res://Levels/nivåskjerm_button.gd" id="2_psb2w"]
 [ext_resource type="Script" uid="uid://dri5joahy4vjn" path="res://Levels/button.gd" id="3_nns18"]
+[ext_resource type="AudioStream" uid="uid://cb4gafn7836ks" path="res://Sound/FYRSTIKK DEFENSE - win (utkast 1).wav" id="4_nij62"]
 [ext_resource type="Texture2D" uid="uid://dj6vi83id48ld" path="res://Images/lobby bakgrunn.png" id="4_xoari"]
 
 [node name="Gamewon" type="Node2D"]
@@ -43,6 +44,7 @@ scale = Vector2(36, 20.25)
 texture = ExtResource("4_xoari")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nij62")
 autoplay = true
 
 [connection signal="pressed" from="CenterContainer/GridContainer/Button" to="CenterContainer/GridContainer/Button" method="_on_pressed"]

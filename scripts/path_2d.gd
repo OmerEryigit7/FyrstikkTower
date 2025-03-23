@@ -21,24 +21,31 @@ func spawn():
 				defines.remaining_enemy = 0 + enemy_angryteacher
 				enemy_angryteacher = 7
 				enemy_smallteacher = 1
+				defines.money += 50
 				get_node("%AudioStreamPlayer2").play_sound()
 				
 			elif defines.wave == 3: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
 				enemy_angryteacher = 7
 				enemy_smallteacher = 2
+				defines.money += 50
+
 				get_node("%AudioStreamPlayer2").play_sound()
 				
 			elif defines.wave == 4: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
 				enemy_angryteacher = 8
 				enemy_smallteacher = 3
+				defines.money += 50
+
 				get_node("%AudioStreamPlayer2").play_sound()
 				
 			elif defines.wave == 5: 
 				defines.remaining_enemy = 0 + enemy_angryteacher + enemy_smallteacher
 				enemy_angryteacher = 8
 				enemy_smallteacher = 4
+				defines.money += 50
+
 				get_node("%AudioStreamPlayer2").play_sound()
 				
 			for i in range(enemy_angryteacher):

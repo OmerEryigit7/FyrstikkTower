@@ -1,7 +1,7 @@
 extends PathFollow2D
-var speed = 350
+var speed = 300
 
-var enemyHealth = 1
+var enemyHealth = 1 # gjør ingenting, tenker å bruke det i fremtiden.
 func _process(delta):
 	progress += speed * delta
 
@@ -18,5 +18,15 @@ func _process(delta):
 		
 		if defines.remaining_enemy == 0:
 			defines.wave += 1
-			get_node("/root/Main/Path2D").spawn()
 			get_node("/root/Main/Label2").updatelabel()
+			get_node("/root/Main/Path2D").spawn()
+
+			
+func kill():
+	defines.remaining_enemy -= 1
+	print(defines.remaining_enemy)
+	if defines.remaining_enemy == 0:
+		defines.wave += 1
+		get_node("/root/Main/Label2").updatelabel()
+		get_node("/root/Main/Path2D").spawn()
+	queue_free()

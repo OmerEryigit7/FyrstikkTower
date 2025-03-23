@@ -15,9 +15,10 @@ scale = Vector2(2.0649, 1.8719)
 layout_mode = 0
 offset_left = 3.0
 offset_top = 3.0
-offset_right = 38.0
-offset_bottom = 39.0
+offset_right = 41.0
+offset_bottom = 43.0
 scale = Vector2(0.898313, 0.973155)
 
 [node name="Panel" parent="Panel/FlowContainer" instance=ExtResource("1_cvf5a")]
+custom_minimum_size = Vector2(35, 40)
 layout_mode = 2

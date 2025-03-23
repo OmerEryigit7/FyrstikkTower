@@ -18,5 +18,5 @@ func _process(delta: float) -> void:
 
 func _on_hit_target() -> void:
 	if target:
-		target.get_parent().kill()
-	queue_free()  # Destroy the object after hitting the target
+		target.get_parent().get_parent().kill()
+	queue_free()
